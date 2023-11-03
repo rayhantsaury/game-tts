@@ -1,0 +1,139 @@
+.tts-container {
+  margin: auto;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1120px;
+}
+
+.tts-table {
+  display: flex;
+  justify-content: right;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.tts-table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.tts-table table tr {
+  width: 50px;
+  height: 50px;
+}
+
+.tts-table table td div {
+  width: 50px;
+  height: 50px;
+}
+
+.tts-table table td {
+  border: 1px solid #cdcdcd;
+  padding: 0;
+  margin: 0;
+  background-color: #23ab96;
+  position: relative;
+}
+
+.tts-table table td input {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px;
+  text-align: center;
+  color: #000000;
+}
+
+.tts-table table td input:focus {
+  outline: unset;
+}
+
+.tts-table table td span {
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.tts-table table td input.active {
+  background-color: #b2e1d9;
+}
+.tts-table table td input.answered {
+  background-color: #b2e1d9;
+  color: #23ab96;
+}
+
+.tts-questions .across,
+.tts-questions .down {
+  text-align: left;
+  flex: 1;
+  margin-bottom: 8px;
+}
+
+.tts-questions {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+}
+
+.tts-questions .across,
+.tts-questions .down {
+  text-align: left;
+  flex: 1;
+  margin-bottom: 1px;
+}
+
+.tts-questions .across p,
+.down p {
+  cursor: pointer;
+}
+
+.tts-questions .across p.active,
+.down p.active {
+  background-color: #23ab96;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .tts-container {
+    flex-direction: column-reverse;
+  }
+
+  .tts-questions {
+    width: 100%;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .tts-table table td div {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 728px) {
+  .tts-table table td div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tts-table table td span {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
